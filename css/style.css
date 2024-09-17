@@ -1,0 +1,675 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Linkin park;
+    src: url(../fonts/LinkinPark.ttf);
+}
+@font-face {
+    font-family: linkinpark2;
+    src: url(../fonts/linkinpark2.ttf);
+}
+:root{
+    --colorhead: whitesmoke;
+    --colormain: #252525;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%;
+    height: 20vh;
+    background-color: var(--colormain);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid black;
+}
+.logo{
+    height: 100%;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.logo img{
+    width: 100%;
+    filter: invert(100);
+}
+nav{
+    background-image: linear-gradient(-32deg, transparent 0%, var(--colorhead) 0% 85%, transparent 0%);
+    height: 60px;
+    padding: 20px;
+    font-family: Linkin park, sans-serif;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 100px;
+    transition: all .2s ease ;
+}
+nav:hover{
+    background-image: linear-gradient(-32deg, transparent 0%, black 0% 85%, transparent 0%);
+}
+nav a{
+    padding: 18px;
+    text-decoration: none;
+    color: black;
+    transition: all .2s linear ;
+}
+nav a:hover{
+    color: var(--colorhead);
+}
+.whois{
+    background-color: azure;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    background-image: url(../resources/backgrounds/background_lp.gif);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    color: #f9f7d3;
+    font-size: 1.5em;
+    font-family: Linkin park, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.whois p{
+    padding: 50px;
+    text-shadow: 5px 10px 5px #000000;
+    position: relative;
+}
+.title1{
+    background-color: var(--colormain);
+    text-align: center;
+    color: var(--colorhead);
+    padding: 10px;
+    font-family: Linkin park, sans-serif;
+    background-attachment: fixed;
+    font-size: 1.5em;
+    position: relative;
+    overflow: hidden;
+}
+.title1 h1{
+    position: relative;
+}
+.gallery{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background-color: var(--colormain);
+}
+.gallery img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.gallery img:hover{
+    cursor: crosshair;
+    width: 100px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.names{
+    display: grid;
+    width: 100%;
+    height: 60px;
+    background-color: var(--colormain);
+    font-family: Linkin park, sans-serif;
+    align-items: center;
+    color: var(--colorhead);
+    font-size: 1.5em;
+    grid-template-areas: 
+    "name1 name2 name3 name4 name5 name6";
+}
+.nombre1{
+    grid-area: name1;
+    text-align: center;
+}
+.nombre2{
+    grid-area: name2;
+    text-align: center;
+}
+.nombre3{
+    grid-area: name3;
+    text-align: center;
+}
+.nombre4{
+    grid-area: name4;
+    text-align: center;
+}
+.nombre5{
+    grid-area: name5;
+    text-align: center;
+}
+.name6{
+    grid-area: name6;
+    text-align: center;
+}
+.back2{
+    height: auto;
+    width: 100%;
+    background-image: url(../resources/backgrounds/background2_lp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+}
+.title2{
+    text-align: center;
+    padding: 10px;
+    padding-top: 50px;
+    font-family: Linkin park, sans-serif;
+    font-size: 1.5em;
+    position: relative;
+    color: var(--colorhead);
+    text-shadow: 10px 10px 10px black;
+}
+.allcontent{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 42vh;
+    width: 100%;
+    align-items: center;
+}
+.allcontent h4, h2, small, a{
+    margin: 0;
+    padding: 0;
+}
+.allcontent a{
+    text-decoration: none;
+}
+
+.albums{
+
+    width: 100%;
+    margin: 0px 0px;
+
+
+}
+@media(min-width:768px){
+    .albums{
+        margin: 0px 60px;
+    }
+}
+
+.albums h2{
+    font-size: 45px;
+    line-height: 38px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    font-family: Linkin park, sans-serif;
+    text-shadow: 10px 10px 10px black;
+}
+
+.carrusel-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.carrusel-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+.carrusel{
+    position: relative;
+    width: 210px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.carrusel h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: whitesmoke;
+    padding: 15px;
+}
+
+.carrusel h4 small{
+    font-size: 16px;
+    display: block;
+    font-family: Linkin park, sans-serif;
+    color: var(--colormain);
+}
+.carrusel a img{
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+}
+
+@media (min-width:768px) {
+    .carrusel{
+        width: 275px;
+    }
+    .carrusel a img{
+        width: 250px;
+    }
+}
+
+.carrusel-arrow{
+    border-radius: 30px;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.carrusel-arrow:focus{
+    outline: 0;
+}
+.carrusel-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,0.7);
+}
+
+.carrusel-prev{
+    left: 0px;
+}
+.carrusel-next{
+    right: 0px;
+}
+.subtitle2{
+    font-family: Linkin park, sans-serif;
+    font-size: 1.5em;
+    padding-left: 50px;
+    padding: 20px;
+    background-color: var(--colormain);
+    color: var(--colorhead);
+    overflow: hidden;
+}
+.videos{
+    width: 100%;
+    background-color: antiquewhite;
+    height: 50vh;
+    display: grid;
+    grid-template-areas: 
+    "video1 video2 video3"
+    "video4 video5 video6";
+}
+.videosg1 {
+    grid-area: video1;
+    background-color: cadetblue;
+    background-image: url(../resources/imagenesParaplayers/numb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+}
+
+.videosg1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.966),
+        rgba(0, 0, 0, 0.884)
+    );
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+    z-index: 1;
+}
+.videosg1:hover::before {
+    opacity: 1; /* Aplica el gradiente al hacer hover */
+}
+/* Asegúrate de que el contenido dentro del .videosg1 esté por encima del pseudo-elemento */
+.videosg1 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.videosg1 a{
+    text-decoration: none;
+    font-family: Linkin park, sans-serif;
+    color: var(--colorhead);
+    font-size: 2em;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    text-shadow: 10px 10px 10px var(--colormain);
+}
+.videosg1 a:hover{
+    scale: 1.5;
+}
+.videosg2 {
+    grid-area: video2;
+    background-color: cadetblue;
+    background-image: url(../resources/imagenesParaplayers/intheend.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+}
+
+.videosg2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.966),
+        rgba(0, 0, 0, 0.884)
+    );
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+    z-index: 1;
+}
+.videosg2:hover::before {
+    opacity: 1; /* Aplica el gradiente al hacer hover */
+}
+/* Asegúrate de que el contenido dentro del .videosg1 esté por encima del pseudo-elemento */
+.videosg2 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.videosg2 a{
+    text-decoration: none;
+    font-family: Linkin park, sans-serif;
+    color: var(--colorhead);
+    font-size: 2em;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    text-shadow: 10px 10px 10px var(--colormain);
+}
+.videosg2 a:hover{
+    scale: 1.5;
+}
+.videosg3 {
+    grid-area: video3;
+    background-color: cadetblue;
+    background-image: url(../resources/imagenesParaplayers/faint.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+}
+
+.videosg3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.966),
+        rgba(0, 0, 0, 0.884)
+    );
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+    z-index: 1;
+}
+.videosg3:hover::before {
+    opacity: 1; /* Aplica el gradiente al hacer hover */
+}
+/* Asegúrate de que el contenido dentro del .videosg1 esté por encima del pseudo-elemento */
+.videosg3 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.videosg3 a{
+    text-decoration: none;
+    font-family: Linkin park, sans-serif;
+    color: var(--colorhead);
+    font-size: 2em;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    text-shadow: 10px 10px 10px var(--colormain);
+}
+.videosg3 a:hover{
+    scale: 1.5;
+}
+.videosg4 {
+    grid-area: video4;
+    background-color: cadetblue;
+    background-image: url(../resources/imagenesParaplayers/papercut.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+}
+
+.videosg4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.966),
+        rgba(0, 0, 0, 0.884)
+    );
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+    z-index: 1;
+}
+.videosg4:hover::before {
+    opacity: 1; /* Aplica el gradiente al hacer hover */
+}
+/* Asegúrate de que el contenido dentro del .videosg1 esté por encima del pseudo-elemento */
+.videosg4 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.videosg4 a{
+    text-decoration: none;
+    font-family: Linkin park, sans-serif;
+    color: var(--colorhead);
+    font-size: 2em;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    text-shadow: 10px 10px 10px var(--colormain);
+}
+.videosg4 a:hover{
+    scale: 1.5;
+}
+.videosg5 {
+    grid-area: video5;
+    background-color: cadetblue;
+    background-image: url(../resources/imagenesParaplayers/breakingthehabbit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+}
+
+.videosg5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.966),
+        rgba(0, 0, 0, 0.884)
+    );
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+    z-index: 1;
+}
+.videosg5:hover::before {
+    opacity: 1; /* Aplica el gradiente al hacer hover */
+}
+/* Asegúrate de que el contenido dentro del .videosg1 esté por encima del pseudo-elemento */
+.videosg5 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.videosg5 a{
+    text-decoration: none;
+    font-family: Linkin park, sans-serif;
+    color: var(--colorhead);
+    font-size: 2em;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    text-shadow: 10px 10px 10px var(--colormain);
+}
+.videosg5 a:hover{
+    scale: 1.3;
+}
+.videosg6 {
+    grid-area: video6;
+    background-color: cadetblue;
+    background-image: url(../resources/imagenesParaplayers/crawling.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+}
+
+.videosg6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.966),
+        rgba(0, 0, 0, 0.884)
+    );
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave */
+    z-index: 1;
+}
+.videosg6:hover::before {
+    opacity: 1; /* Aplica el gradiente al hacer hover */
+}
+/* Asegúrate de que el contenido dentro del .videosg1 esté por encima del pseudo-elemento */
+.videosg6 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.videosg6 a{
+    text-decoration: none;
+    font-family: Linkin park, sans-serif;
+    color: var(--colorhead);
+    font-size: 2em;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    text-shadow: 10px 10px 10px var(--colormain);
+}
+.videosg6 a:hover{
+    scale: 1.3;
+}
+footer{
+    width: 100%;
+    height: 20vh;
+    background-color: var(--colormain);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.logo2{
+    order: 1;
+    height: 100%;
+    width: 150px;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+.logo2 img{
+    width: 100%;
+    filter: invert(100);
+}
+.redes{
+    order: 0;
+    width: 50%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: center;
+    background-image: linear-gradient(42deg, transparent 0%, black 0% 85%, transparent 0%);
+    transition: all .5s ease;
+}
+.redes img{
+    height: 60px;
+    filter: invert(100);
+    transition: all .5s ease;
+}
+.redes:hover{
+    background-image: linear-gradient(42deg, transparent 0%, white 0% 85%, transparent 0%);
+}
+.redes img:hover{
+    filter: invert(0);
+}
+
+
